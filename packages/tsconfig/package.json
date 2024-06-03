@@ -1,0 +1,9 @@
+{
+  "name": "@package-name/tsconfig",
+  "type": "module",
+  "version": "0.0.0",
+  "private": true,
+  "exports": {
+    ".": "./tsconfig.json"
+  }
+}

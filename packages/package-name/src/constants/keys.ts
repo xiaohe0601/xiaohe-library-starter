@@ -1,0 +1,1 @@
+export const GLOBAL_INSTALLED_KEY = Symbol("GLOBAL_INSTALLED");

@@ -1,0 +1,9 @@
+{
+  "extends": "@package-name/tsconfig",
+  "compilerOptions": {
+    "types": ["vite/client"]
+  },
+  "references": [
+    { "path": "./tsconfig.test.json" }
+  ]
+}

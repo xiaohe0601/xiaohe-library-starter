@@ -1,0 +1,18 @@
+{
+  "name": "@package-name/playground",
+  "type": "module",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "package-name": "workspace:^",
+    "ress": "^5.0.2"
+  },
+  "devDependencies": {
+    "unplugin-vue-components": "^0.27.0"
+  }
+}

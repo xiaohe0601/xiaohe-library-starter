@@ -1,0 +1,99 @@
+{
+  "name": "package-name",
+  "type": "module",
+  "version": "0.0.0",
+  "description": "__description__",
+  "author": "xiaohe0601 <HeDianGeng0601@outlook.com>",
+  "license": "MIT",
+  "funding": "https://github.com/sponsors/xiaohe0601",
+  "homepage": "https://github.com/xiaohe0601/package-name#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xiaohe0601/package-name"
+  },
+  "sponsor": {
+    "url": "https://github.com/sponsors/xiaohe0601"
+  },
+  "bugs": "https://github.com/xiaohe0601/package-name/issues",
+  "keywords": [],
+  "sideEffects": [
+    "styles/**"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./esm/index.mjs",
+      "require": "./lib/index.cjs"
+    },
+    "./esm": {
+      "types": "./esm/index.d.ts",
+      "import": "./esm/index.mjs"
+    },
+    "./lib": {
+      "types": "./lib/index.d.ts",
+      "require": "./lib/index.cjs"
+    },
+    "./esm/*.mjs": {
+      "types": "./esm/*.d.ts",
+      "import": "./esm/*.mjs"
+    },
+    "./esm/*": {
+      "types": [
+        "./esm/*.d.ts",
+        "./esm/*/index.d.ts"
+      ],
+      "import": "./esm/*.mjs"
+    },
+    "./lib/*.cjs": {
+      "types": "./lib/*.d.ts",
+      "require": "./lib/*.cjs"
+    },
+    "./lib/*": {
+      "types": [
+        "./lib/*.d.ts",
+        "./lib/*/index.d.ts"
+      ],
+      "require": "./lib/*.cjs"
+    },
+    "./global": {
+      "types": "./global.d.ts"
+    },
+    "./resolver": {
+      "types": "./esm/resolver/index.d.ts",
+      "import": "./esm/resolver/index.mjs"
+    },
+    "./*": "./*"
+  },
+  "main": "lib/index.cjs",
+  "module": "esm/index.mjs",
+  "unpkg": "dist/index.js",
+  "jsdelivr": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "esm",
+    "global.d.ts",
+    "lib",
+    "styles"
+  ],
+  "scripts": {
+    "build": "esno build/script.ts && gulp --require @esbuild-kit/cjs-loader -f build/gulpfile.ts",
+    "clean": "rimraf {dist,esm,lib,styles} --glob"
+  },
+  "peerDependencies": {
+    "vue": ">=3.3.0"
+  },
+  "devDependencies": {
+    "@esbuild-kit/cjs-loader": "^2.4.4",
+    "@types/gulp": "^4.0.17",
+    "@types/gulp-autoprefixer": "^0.0.37",
+    "@types/gulp-clean-css": "^4.3.4",
+    "@types/gulp-sass": "^5.0.4",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^9.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-sass": "^5.1.0",
+    "unplugin-vue-components": "^0.27.0",
+    "vite-plugin-dts": "^3.9.1"
+  }
+}

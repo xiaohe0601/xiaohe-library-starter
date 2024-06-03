@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "lib": ["ESNext"],
+    "moduleDetection": "force",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "types": ["node", "vite/client"],
+    "strict": true,
+    "noImplicitOverride": true,
+    "noUncheckedIndexedAccess": true,
+    "noEmit": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "preserveSymlinks": true,
+    "verbatimModuleSyntax": true,
+    "skipLibCheck": true
+  },
+  "include": [
+    "resolver/**/*.ts",
+    "build/**/*.ts"
+  ]
+}

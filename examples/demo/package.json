@@ -1,0 +1,9 @@
+{
+  "name": "@package-name/demo",
+  "type": "module",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "esno src/index.ts"
+  }
+}
